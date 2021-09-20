@@ -3298,7 +3298,7 @@ class WebInterface(object):
     @cherrypy.expose
     @requireAuth(member_of("admin"))
     def get_scheduler_table(self, **kwargs):
-
+        x = 0
         schedulers = [
             [plexpy.SCHED, plexpy.SCHED_LIST],
             [plexpy.PMS_SERVERS.SCHED, plexpy.PMS_SERVERS.SCHED_LIST],
@@ -3318,7 +3318,7 @@ class WebInterface(object):
                 if job:
                     run_interval = arrow.get(str(job.trigger.interval), ['H:mm:ss', 'HH:mm:ss'])
                     next_run_time = job.next_run_time
-                    next_run_interval = arrow.get(job.next_run_time).timestamp - arrow.now().timestamp
+                    next_run_interval = arrow.get(job.next_run_time).timestamp() - arrow.now().timestamp()
                 else:
                     run_interval = 0
                     next_run_time = 0
@@ -3327,7 +3327,6 @@ class WebInterface(object):
                                        'run_interval': run_interval,
                                        'next_run_interval': next_run_interval,
                                        'next_run_time': next_run_time})
-
         return serve_template(templatename="scheduler_table.html", scheduled_jobs=scheduled_jobs)
 
     @cherrypy.expose

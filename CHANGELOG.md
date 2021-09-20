@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.04 (2021-09-20)
+* (UPDATED) Update installed packages. 
+* (FIXED) Issue with use of ARROW timestamp. 
+
 ## v4.1.03 (2020-09-19)
 * (FIXED) Issue with notifier script execution after V4.1 changes. 
 
