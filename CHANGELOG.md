@@ -1,5 +1,8 @@
 # Changelog
 
+## v4.1.05 (2021-10-01)
+* (FIXED) Issue with use of ARROW timestamp in newsletters.  
+
 ## v4.1.04 (2021-09-20)
 * (UPDATED) Update installed packages. 
 * (FIXED) Issue with use of ARROW timestamp. 
