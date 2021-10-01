@@ -378,8 +378,8 @@ class Newsletter(object):
             else:
                 self.start_date = self.end_date.shift(hours=-self.config['time_frame']).floor('hour')
 
-        self.end_time = self.end_date.timestamp
-        self.start_time = self.start_date.timestamp
+        self.end_time = self.end_date.int_timestamp
+        self.start_time = self.start_date.int_timestamp
 
         self.parameters = self.build_params()
         self.subject = subject or self._DEFAULT_SUBJECT
