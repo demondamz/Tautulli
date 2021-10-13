@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.06 (2021-10-13)
+* (FIXED) Issue with signin after PyJWT update.
+* (UPDATED) Update installed packages.
+
 ## v4.1.05 (2021-10-01)
 * (FIXED) Issue with use of ARROW timestamp in newsletters.  
 
