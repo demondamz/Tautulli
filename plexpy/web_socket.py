@@ -52,7 +52,7 @@ class ServerWebSocket(object):
     def start(self):
         self.WS_THREAD = ServerWebSocketThread(self.server, name="WebSocket-" + self.server.CONFIG.PMS_NAME, target=self.connect)
         self.WS_THREAD.daemon = True
-        if not self.WS_THREAD.isAlive():
+        if not self.WS_THREAD.is_alive():
             self.WS_THREAD.start()
 
     def shutdown(self):
