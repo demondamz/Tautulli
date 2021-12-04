@@ -1,5 +1,9 @@
 # Changelog
 
+## v4.1.07 (2021-12-04)
+* (FIXED) thread.isAlive() has been deprecated and replaced with is_alive()
+* (UPDATED) cffi package 1.14.6 not available for python 3.10.
+
 ## v4.1.06 (2021-10-13)
 * (FIXED) Issue with signin after PyJWT update.
 * (UPDATED) Update installed packages.
