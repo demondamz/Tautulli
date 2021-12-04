@@ -24,7 +24,7 @@ certifi==2021.10.8
     # via
     #   cloudinary
     #   requests
-cffi==1.14.6
+cffi==1.15.0
     # via cryptography
 chardet==4.0.0
     # via aiohttp
