@@ -1,0 +1,16 @@
+version: "3"
+services:
+  tautulli:
+    image: demondamz/tautulli
+    container_name: tautulli
+    restart: unless-stopped
+    ports:
+      - 8181:8181
+    environment:
+      - PGID=1000
+      - PUID=1000
+    volumes:
+      - /opt/appdata/tautulli:/config
+      - /opt/appdata/tautulli/scripts:/scripts
+      - /etc/localtime:/etc/localtime
+      - /opt/appdata/plex/database/Library/Application Support/Plex Media Server/Logs:/logs
